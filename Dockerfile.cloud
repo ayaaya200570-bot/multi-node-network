@@ -1,0 +1,4 @@
+# Node Central (Cloud)
+FROM nginx:alpine
+RUN echo "<h1>[CLOUD NODE] Serveur Central - GitOps Infrastructure</h1>" > /usr/share/nginx/html/index.html
+EXPOSE 80

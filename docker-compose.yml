@@ -1,0 +1,28 @@
+version: '3.8'
+
+networks:
+  cloud_edge_net:
+    driver: bridge
+
+services:
+  # 1. Le Nœud Central (Cloud)
+  cloud_node:
+    build:
+      context: .
+      dockerfile: Dockerfile.cloud
+    container_name: cloud_server
+    ports:
+      - "8081:80"
+    networks:
+      - cloud_edge_net
+
+  # 2. Le Nœud Distant (Edge/Agence)
+  edge_node:
+    build:
+      context: .
+      dockerfile: Dockerfile.edge
+    container_name: edge_server
+    ports:
+      - "8082:80"
+    networks:
+      - cloud_edge_net
