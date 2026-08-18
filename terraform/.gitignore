@@ -1,0 +1,11 @@
+# Fichiers d'état Terraform
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Dossier d'initialisation Terraform
+.terraform/
+
+# Fichier de variables
+*.tfvars
+*.tfvars.json
