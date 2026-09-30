@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: edge-server
-        image: nginx:alpine
+        image: ayaaya200570/backend-app:v1.0.0
         ports:
         - containerPort: 80
 ---
